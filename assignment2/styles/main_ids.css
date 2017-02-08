@@ -1,0 +1,10 @@
+/*Created by Liavontsi Brechka 300800345*/
+#intro {
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+#overview {
+    display: none;
+}

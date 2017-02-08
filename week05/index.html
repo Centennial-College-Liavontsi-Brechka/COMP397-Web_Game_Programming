@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo impress</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body onload="init()">
+    <div id="impress">
+        <div id="1" class="step slide">
+            <div class="slide-text">
+                <p>Here is a time machine!</p>
+                <p><a href="#2">FLIP</a> it.</p>
+                <p><a href="#3">WAIT</a> more.</p>
+            </div>
+        </div>
+
+        <div id="2" class="step slide" data-z="1000" data-y="1000">
+            <div class="slide-text">
+                <p>You went back in time!</p>
+            </div>
+            <div class="menu">
+                <a href="#1">START OVER</a>
+            </div>
+        </div>
+
+        <div id="3" class="step slide" data-x="-1000">
+            <div class="slide-text">
+                <p>It`s too late now, go to sleep</p>
+            </div>
+            <div class="menu">
+                <a href="#1">START OVER</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/libs/impress.js"></script>
+    <script src="scripts/presentation.js"></script>
+    <!--<script>impress().init();</script>-->
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!--Created by Liavontsi Brechka 300800345-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sheep in ship</title>
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/main_classes.css" rel="stylesheet">
+    <link href="styles/main_ids.css" rel="stylesheet">
+    <link href="styles/main_tags.css" rel="stylesheet">
+    <link href="styles/fallback.css" rel="stylesheet">
+    <link href="styles/star_wars_scroll.css" rel="stylesheet">
+</head>
+<body onload="init()">
+<div id="impress">
+    <!--Fallback message to notify user if his browser doesn't support impress js-->
+    <div class="fallback-message">
+        <p>Unfortunately, your browser doesn't support impress js.</p>
+        <p>Please, use the newest ones in order to play the game.</p>
+    </div>
+
+    <!--Game introduction.
+    By Craig Buckler: http://www.sitepoint.com/css3-starwars-scrolling-text/-->
+    <div id="intro" class="step" data-z="2000" data-y="6000">
+        <div>
+            <p id="start">One day, people tried to send a ship to Mars&hellip;</p>
+
+            <p id="skip_titles"><a href="#mars">Skip</a></p>
+
+            <h1 id="title">SHEEP IN SHIP<sub>Mars adventures</sub></h1>
+
+            <div id="titles">
+                <div id="titlecontent">
+                    <p class="center">EPISODE I<br/>
+                        GET ME BACK HOME</p>
+                    <p>The humanity decided to continue Mars exploring missions.</p>
+                    <p>By using a special spaceship, people wanted to test the safety of such flights,
+                        and, as a first flight, they took a sheep, named Sam, to be an experimental passenger.</p>
+                    <p>However, during the flight, something went wrong and people lost a contact with the animal`s
+                        spacecraft.</p>
+                    <p>Fortunately, Sam reached Mars, but his ship is out of fuel.</p>
+                    <p>Help Sam to find a way to refill it or get back home.</p>
+                    <p>DON'T TRUST EVERYTHING YOU HEAR!</p>
+                    <p>The original article (about this style) link:</p>
+                    <p class="center">
+                        <a href="http://www.sitepoint.com/css3-starwars-scrolling-text/">
+                            sitepoint.com/<br/>css3-starwars-scrolling-text/</a>
+                    </p>
+                    <br/>
+                    <p class="center">
+                        <a href="#mars">Start an adventure</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--First slide. Node - 1-->
+    <div id="mars" class="slide step" data-y="-70">
+        <div class="title">
+            <h2>Mars planet</h2>
+        </div>
+        <div class="description">
+            <p>Sam noticed that there are groups of Earth-like humans (Mamans) and Earth-like sheep (Meeps)</p>
+        </div>
+        <!--Right leaf of main game tree is maman city choice, Left - Meeps flock-->
+        <ul class="choice">
+            <li>
+                <a href="#maman_city">Go to Mamans and ask for a fuel (Luckily, they understand sheep language)</a>
+            </li>
+            <li>
+                <a href="#meeps">Ask Meeps about life on Mars</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Maman city choise. Node - 2-->
+    <div id="maman_city" class="slide step" data-x="-1500" data-z="-500" data-rotate-y="90">
+        <div class="title">
+            <h2>Mamans city</h2>
+        </div>
+        <div class="description">
+            <p>Maman representative: "We don't have any fuel on this planet.
+                You can try to look for it in mountain caves. It is the safest place on Mars.
+                Caves have a lot of useful things.
+                Or you can use our super Jet Pack. We guarantee that this type of transportation is very good,
+                but we have never tried to use it for travelling to other planets."</p>
+        </div>
+        <!--Right leaf - caves slide. Left - Jet Pack choice.
+        Also opportunity to go to the same level of tree, but in another direction.-->
+        <ul class="choice">
+            <li>
+                <a href="#caves">Go to caves</a>
+            </li>
+            <li>
+                <a href="#jetpack">Use Jet Pack</a>
+            </li>
+            <li>
+                <a href="#meeps">Ask Meeps about life on Mars</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Meeps flock choice. Node - 3-->
+    <div id="meeps" class="slide step" data-x="1500" data-z="-500" data-rotate-y="-90">
+        <div class="title">
+            <h2>Meep flock</h2>
+        </div>
+        <div class="description">
+            <p>Flock leader: "Mars is a beautiful planet. We are very happy to be here.
+                Mamans are very friendly, so we don't have any problems with them"</p>
+        </div>
+        <!--Right leaf - live with Meeps. Left - question about fuel.
+        Alternative - go to Mamans.-->
+        <ul class="choice">
+            <li>
+                <a href="#meep_life">Stay and live with Meeps</a>
+            </li>
+            <li>
+                <a href="#question">Ask about fuel</a>
+            </li>
+            <li>
+                <a href="#maman_city">Go to Mamans</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Caves choice. Node - 4-->
+    <div id="caves" class="slide step" data-x="-1500" data-z="1200" data-y="1500" data-rotate-y="90">
+        <div class="title">
+            <h2>Caves</h2>
+        </div>
+        <div class="description">
+            <p>Sam came to caves, but now should choose where to go. He has two option: turn right or left</p>
+        </div>
+        <!--Choice to go left or right in caves-->
+        <ul class="choice">
+            <li>
+                <a href="#cave_left_out">Go left</a>
+            </li>
+            <li>
+                <a href="#cave_right_out">Go right</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Jetpack choice. Node - 5-->
+    <div id="jetpack" class="slide step" data-x="-1500" data-z="-2200" data-y="1500" data-rotate-y="90">
+        <div class="title">
+            <h2>Jet Pack travel</h2>
+        </div>
+        <div class="description">
+            <p>Mamans gave Sam a jet pack. Now, help him to decide in what direction he should fly.</p>
+        </div>
+        <!--Choice where to go with Jetpack-->
+        <ul class="choice">
+            <li>
+                <a href="#earth_jetpack_out">Jet Pack should contain enough energy to fly. Go straight to Earth</a>
+            </li>
+            <li>
+                <a href="#moon_jetpack_out">Visit Moon on the way to home</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Life with Meeps choice. Node - 6-->
+    <div id="meep_life" class="slide step" data-x="1500" data-z="-2000" data-y="-1600" data-rotate-y="-90">
+        <div class="title">
+            <h2>Meep life</h2>
+        </div>
+        <div class="description">
+            <p>Sam noticed that Meeps act strangely after his joining to flock.
+                It seems that Martian sheep are preparing for something.</p>
+        </div>
+        <!--Left leaf of choice - result of living with Meeps. Right - desert exploring.
+        Alternative - go to Mamans.-->
+        <ul class="choice">
+            <li>
+                <a href="#meep_life_out">Continue to live with them.
+                    Perhaps, they are preparing some surprise for their guest from Earth</a>
+            </li>
+            <li>
+                <a href="#desert_out">Run away and look for fuel in Martian desert</a>
+            </li>
+            <li>
+                <a href="#maman_city">Go to Mamans and try to ask them about fuel</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Ask Meeps about fuel choice. Node - 7-->
+    <div id="question" class="slide step" data-x="1500" data-z="1000" data-y="-1600" data-rotate-y="-90">
+        <div class="title">
+            <h2>Question about fuel</h2>
+        </div>
+        <div class="description">
+            <p>Flock leader: "Arrr... We have a lot of fuel in the Dragon cave.
+                Mamans don't know about this cave, because it is dangerous to be there.
+                Also, you can ask molfs (Earth-like wolfs) about fuel. They are very wise animals."</p>
+        </div>
+        <!--Outcomes of exploring dragon cave (left leaf) and negotiation with molfs (right leaf).
+        Alternative - go to Mamans.-->
+        <ul class="choice">
+            <li>
+                <a href="#dragon_cave_out">Go to Dragon cave. Maybe, they are also friendly Martians.</a>
+            </li>
+            <li>
+                <a href="#molfs_out">Ask mofls about fuel.</a>
+            </li>
+            <li>
+                <a href="#maman_city">Go to Mamans and try to ask them about fuel</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Cave left (Outcome 1 - Fail)-->
+    <div id="cave_left_out" class="slide step" data-x="-1500" data-z="2200" data-y="2500" data-rotate-y="90">
+        <div class="title">
+            <h2>Caves</h2>
+        </div>
+        <div class="description">
+            <p>What a luck! Sam found fuel for his spacecraft! Good job!</p>
+            <p>But wait! How to get out from caves?! It is turned out that it is a difficult maze!
+                You cannot find a way from it, so Sam now live here...</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+            <li>
+                <a href="#mars">Start again</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Cave right (Outcome 2 - Fail)-->
+    <div id="cave_right_out" class="slide step" data-x="-1500" data-z="200" data-y="2500" data-rotate-y="90">
+        <div class="title">
+            <h2>Caves</h2>
+        </div>
+        <div class="description">
+            <p>Oh no! Sam met ancient Gorgon Medusa and she turned him to stone! Poor Sam...</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+            <li>
+                <a href="#mars">Start again</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Use jetpack and go straight to Earth (Outcome 3 - Fail) -->
+    <div id="earth_jetpack_out" class="slide step" data-x="-1500" data-z="-1000" data-y="2500" data-rotate-y="90">
+        <div class="title">
+            <h2>Spacewalk</h2>
+        </div>
+        <div class="description">
+            <p>Well done! Sam is on his way to home! He just passed Moon!</p>
+            <p>Wow! Something goes wrong! It is turned out that Jet Pack doesn't have enough energy to reach Earth!</p>
+            <p>Sam lost in universe...</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+            <li>
+                <a href="#mars">Start again</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--User jetpack to go home, but visit Moon (Outcome 4 - Success)-->
+    <div id="moon_jetpack_out" class="slide step" data-x="-1500" data-z="-3400" data-y="2500" data-rotate-y="90">
+        <div class="title">
+            <h2>Moon</h2>
+        </div>
+        <div class="description">
+            <p>Well done! That was a good idea to visit Moon.
+                It seems like Jet Pack doesn't have enough energy to reach Earth.</p>
+            <p>Fortunately, Sam found space energy that is needed by Jet Pack.</p>
+            <p>After this he successfully got home!</p>
+            <p>THANK YOU FOR HELP! MARS MISSION COMPLETED!</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Outcome of living with Meeps (Outcome 5 - Fail)-->
+    <div id="meep_life_out" class="slide step" data-x="1500" data-z="-3100" data-y="-2600" data-rotate-y="-90">
+        <div class="title">
+            <h2>Meep life end</h2>
+        </div>
+        <div class="description">
+            <p>They didn't prepare any surprise. At least a pleasant surprise.
+                They arranged an agreement with molfs (Earth-like wolfs)
+                to get some vital food for Meeps instead of their Earth guest.</p>
+            <p>Sam was sold to molfs. As a result, he couldn't go home anymore...</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+            <li>
+                <a href="#mars">Start again</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Desert exploring outcome (Outcome 6 - Fail)-->
+    <div id="desert_out" class="slide step" data-x="1500" data-z="-1100" data-y="-2600" data-rotate-y="-90">
+        <div class="title">
+            <h2>Martian desert</h2>
+        </div>
+        <div class="description">
+            <p>Sam couldn't find any fuel in Martian desert. Moreover, he just lost here...</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+            <li>
+                <a href="#mars">Start again</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Dragon cave visiting outcome (Outcome 7 - Fail)-->
+    <div id="dragon_cave_out" class="slide step" data-x="1500" data-z="100" data-y="-2600" data-rotate-y="-90">
+        <div class="title">
+            <h2>Dragon Cave</h2>
+        </div>
+        <div class="description">
+            <p>Unfortunately, Martian dragons are not friendly at all!
+                They even don't understand other creatures.</p>
+            <p>Sam was eaten by them....</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+            <li>
+                <a href="#mars">Start again</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Molfs negotiation outcome (Outcome 8 - Fail)-->
+    <div id="molfs_out" class="slide step" data-x="1500" data-z="2100" data-y="-2600" data-rotate-y="-90">
+        <div class="title">
+            <h2>Molfs flock</h2>
+        </div>
+        <div class="description">
+            <p>Molfs are wise and clever. They said where Sam can find fuel for the ship.
+                However, they made a deal with Sam: he should bring them some delicious food that can be found on Mars.
+                As turned out, Sam couldn't find the proper one, so Molfs killed him...</p>
+        </div>
+        <ul class="choice">
+            <li>
+                <a href="#overview">Overview of the game</a>
+            </li>
+            <li>
+                <a href="#mars">Start again</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Overview of the game structure-->
+    <div id="overview" class="step" data-scale="10"></div>
+</div>
+
+<script src="scripts/lib/impress.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/*Greetings part*/
+#greetingsWrapper {
+    text-align: center;
+}
+
+/*Game part*/
+#gameWrapper {
+    display: none;
+    width: 700px;
+    margin: 0px auto;
+}
+
+#gameWrapper h1 {
+    text-align: center;
+}
+
+/*Player stats*/
+#playerStats {
+    float: left;
+}
+
+/*Main container*/
+#mainContainer {
+    width: 480px;
+    margin-left: 200px;
+}
+
+#winOrLose {
+    text-align: center;
+}
+
+#betEntry {
+    text-align: center;
+}
+
+/*Slot machine*/
+#slotMachine {
+    background-image: url("../asset/img/machine.png");
+    width: 480px;
+    height: 370px;
+}
+
+#reels {
+    position: relative;
+    top: 140px;
+    left: 55px;
+}
+
+.reel {
+    width: 100px;
+    height: 100px;
+    margin-right: 2px;
+    float: left;
+    border: 1px solid #000;
+    background-image: url("../asset/img/seven.png");
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "comp397-s2016-lesson8",
+  "authors": [
+    "leontibrechko <leontibrechko@gmail.com>"
+  ],
+  "description": "COMP397 - BoilerPlate",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "scripts/lib"
+  ],
+  "dependencies": {
+    "EaselJS": "^0.8.2",
+    "PreloadJS": "^0.6.2",
+    "SoundJS": "^0.6.2",
+    "TweenJS": "^0.6.2"
+  }
+}

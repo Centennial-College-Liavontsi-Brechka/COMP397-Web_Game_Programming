@@ -1,0 +1,87 @@
+/*Created by Liavontsi Brechka 300800345*/
+/*Classes styles*/
+
+/*Impress related styles*/
+.slide {
+    display: block;
+    padding: 80px 40px;
+
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 350px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    background: rgb(255, 168, 76);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 168, 76)), to(rgb(255, 123, 13)));
+    background: -webkit-radial-gradient(rgb(255, 168, 76), rgb(255, 123, 13));
+    background: -moz-radial-gradient(rgb(255, 168, 76), rgb(255, 123, 13));
+    background: -ms-radial-gradient(rgb(255, 168, 76), rgb(255, 123, 13));
+    background: -o-radial-gradient(rgb(255, 168, 76), rgb(255, 123, 13));
+    background: radial-gradient(rgb(255, 168, 76), rgb(255, 123, 13));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    text-align: center;
+    font-size: 24px;
+}
+
+.step {
+    position: relative;
+    width: 900px;
+    height: 700px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Nice transition (fading) of the step while going to next one*/
+.impress-enabled .step {
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition:opacity 1s;
+}
+.impress-enabled .step.active { opacity: 1 }
+
+/*Hiding information in future steps */
+.future .choice, .future .description {
+    display: none;
+}
+
+/*Hiding information in past steps*/
+.past .choice, .past .description{
+    display: none;
+}
+
+/*overview step style*/
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+/*Other classes styles*/
+.title {
+    font-size: 50px;
+}
+
+.description p {
+    margin: 40px;
+}
+
+.choice li {
+    margin: 10px;
+
+    display: inline-block;
+    width: 300px;
+    vertical-align: middle;
+
+    line-height: 29px;
+}
